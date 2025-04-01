@@ -1,0 +1,59 @@
+@use "../util/functions" as *;
+@use "../globals/fonts" as *;
+
+.bottom-nav-container {
+    background-color: #597CA6;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    padding: rem(10) rem(30);
+    height: rem(60);
+}
+//studio logo #2
+.studio-font {
+    transform: translateX(rem(-32));
+    height: rem(50);
+    aspect-ratio: 74/25;
+    align-self: center;
+}
+.bottom-links {
+    align-items: center;
+    display: flex;
+    gap: rem(35);
+}
+.nav-bottom--label img[alt="side_table_png"] {
+    height: rem(20);
+    transform: translateX(rem(3));
+}
+.bottom-links--socials {
+    height: rem(19);
+    text-decoration: none;
+}
+.insta-bottom {
+    display: inline-block;
+}
+.insta-bottom img {
+    aspect-ratio: 640/427;
+    height: rem(19);
+}
+.etsy-bottom img {
+    height: rem(16.5);
+    width: rem(16.5);
+    aspect-ratio: 1/1;
+    transform: translateY(rem(-1));
+}
+.nav-bottom--label img {
+    vertical-align: middle;
+}
+.nav-bottom--label {
+    color: #000;
+    font-family: 'Timeburner', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    text-decoration: none;
+    display: inline-flex;
+    margin: 0;
+    align-items: center;
+}

@@ -1,0 +1,10 @@
+@use '../util' as *;
+
+.container-menu {
+    max-width: rem(656);
+    max-height: rem(70);
+    margin: 0 auto;
+    @include breakpoint(medium) {
+        padding: 0;
+    }
+}

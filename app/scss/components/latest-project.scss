@@ -1,0 +1,29 @@
+@use "../util/functions" as *;
+@use "../globals/fonts" as *;
+
+.latest-project-container {
+    background-image: url("/design/Library_hero.png");
+    aspect-ratio: 96/31;
+    background-size: cover;
+    position: relative;
+}
+
+.meowfficer-logo {
+    height: 50%;
+    flex-shrink: 0;
+    aspect-ratio: 677/275;
+    position: absolute;
+    left: 5%;
+    top: 1%;
+}
+
+.steam-logo {
+    height: 10%;
+    flex-shrink: 0;
+    aspect-ratio: 131/67;
+    border-radius: 10px;
+    background:#FFF;
+    position: absolute; 
+    bottom: 35%; 
+    left: 5%; 
+}
