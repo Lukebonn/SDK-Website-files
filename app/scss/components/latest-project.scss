@@ -27,3 +27,18 @@
     bottom: 35%; 
     left: 5%; 
 }
+
+.itch-logo {
+    width: rem(132);
+    height: rem(44);
+    flex-shrink: 0;
+    aspect-ratio: 132.41/34.00;
+    border-radius: 10px;
+    background:#FFF;
+    position: absolute; 
+    border-style: solid;
+    border-width: rem(8);
+    border-color: white;
+    bottom: 35%;
+    left: 13%;
+}
