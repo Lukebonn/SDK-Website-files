@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "../util/functions" as *;
 
 // 640px, 1150px, 1400px
 $breakpoints-up: (

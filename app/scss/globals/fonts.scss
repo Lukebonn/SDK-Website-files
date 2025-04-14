@@ -6,3 +6,17 @@
     font-weight: normal;
     font-style: normal;
 }
+
+//1001 fonts and open foundry fonts
+@font-face {
+    font-family: 'Arcade Classic';
+    src: url(/design/ARCADECLASSIC.TTF);
+}
+@font-face {
+    font-family: 'Yoster Island';
+    src: url(/design/yoster.ttf);
+}
+@font-face {
+    font-family: 'Cotham Sans';
+    src: url(/design/CothamSans.otf);
+}
