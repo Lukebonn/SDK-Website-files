@@ -1,4 +1,5 @@
 @use "../util/functions" as *;
+@use "../util/breakpoints" as *;
 
 html, body {
     margin: 0;
@@ -13,38 +14,55 @@ body::-webkit-scrollbar {
 } 
 
 .studio-logo1 {
-    align-items: center;
-    justify-content: center;
-    // object-fit: fill;
-    top: 0;
-    left: 0;
-    padding-top: rem(20);
-    overflow: hidden;
-    height: rem(280);
-    aspect-ratio: 288/157;
-    z-index: 20;
+    & {
+        align-items: center;
+        justify-content: center;
+        // object-fit: fill;
+        top: 0;
+        left: 0;
+        padding-top: rem(20);
+        overflow: hidden;
+        height: rem(280);
+        aspect-ratio: 288/157;
+        z-index: 20;
+    }
+    @include breakpoint-down('small') {
+        height: rem(150);
+    }
 }
 .studio-logo {
-    flex-direction: column;
-    display: flex;
-    width: 100vw;
-    // height: 100vh; 
-    // object-fit: fill;
-    position: relative;
-    margin-bottom: 0;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    height: rem(300);
-    overflow: hidden;
+    & {
+        position: relative;
+        flex-direction: column;
+        display: flex;
+        width: 100vw;
+        // height: 100vh; 
+        // object-fit: fill;
+        position: relative;
+        margin-bottom: 0;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        height: rem(300);
+        overflow: hidden;
+    }
+    @include breakpoint-down('small') {
+        height: rem(200);
+    }
 }
 .studio-logo-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    // object-fit: fill;
-    z-index: 10;
+    & {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        filter: brightness(1.5);
+        // object-fit: fill;
+        z-index: 10;
+    }
+    @include breakpoint-down('small') {
+        height: rem(200);
+    }
 }

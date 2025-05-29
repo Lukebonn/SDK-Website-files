@@ -6,32 +6,38 @@
         <script defer src="dist/script.js"></script>
     </head>
     <body>
-        <div class="nav-wrap">
-            <div class="nav-right">
-                <a href="/app/html/team.html" class="nav--label">Team</a>
-                <a href="/app/html/games.html" class="nav--label">Games</a>
-                <a href="/app/html/socials.html" class="nav--label">Socials</a>
-                <a href="/app/html/contact.html" class="nav--label">Contact</a>
-            </div>
-            <div class="nav-left">
-                <a href="/index.html" class="nav--label--table">
-                    <img src="/design/side_table_png.png" alt="side_table_png">
-                </a>
-            </div>
-        </div>
         <div class="studio-logo">
-            <img class="studio-logo" src="/design/Studio_logo_transparent.png" alt="Studio Logo Transparent">
+            <div class="nav-wrap">
+                <div class="nav-right">
+                    <a href="/app/html/team.html" class="nav--label">Team</a>
+                    <a href="/app/html/games.html" class="nav--label">Games</a>
+                    <a href="/app/html/socials.html" class="nav--label">Socials</a>
+                    <a href="/app/html/contact.html" class="nav--label">Contact</a>
+                </div>
+                <div class="nav-left">
+                    <a href="/index.html" class="nav--label--table">
+                        <img src="/design/side_table_png.png" alt="side_table_png">
+                    </a>
+                </div>
+            </div>
+
+            <img class="studio-logo1" src="/design/Studio_logo_transparent.png" alt="Studio Logo Transparent">
             <img class="studio-logo-background" src="/design/Studio_logo_bckgrd_pattern.png" alt="Studio Logo Background">
         </div>
         <div class="who-we-are">
             <div id="grad1"></div>
         </div>
         <div class="fullscreen-gradient" style="
-            height: 100vh; 
             width: 100vw; 
             background-image: linear-gradient(to right, #457a86, #D2D2D2); 
             position: relative;">
-            <div class="scrolling-words-container">
+            <span class="side-table--statement">We Are Side Table Studios</span>
+            <div class="side-table--statement-intro-container">
+                <div class="side-table--statement-intro-background"></div>
+                <span class="side-table--statement-intro-text">"We are a team of college students producing innovative games by
+                    leveraging the unique skills each of our team members have. We hope you enjoy our games!"</span>
+            </div>
+            <!-- <div class="scrolling-words-container">
                 <div class="non-scrolling-words-box">We Are</div>
                 <div class="scrolling-words-box">
                   <ul>
@@ -45,9 +51,10 @@
                     <li style="color: #059400">Innovators</li>
                   </ul>
                 </div>
-            </div>
+            </div> -->
           </div>
         <div class="team-container">
+            <span id="team-sec-title">Get To Know The Team!!!</span>
             <div class="team-card-container">
                 <div class="team-card--pic">
                     <img src="/design/spr_ethanMugshot (1).png" alt="Ethan-Mugshot">
@@ -121,47 +128,45 @@
             </div>
             <span id="Our-latest-project-banner-team">Our Latest Project:</span>
         </div>
-          <div class="latest-project-container">
-            <!-- 
-            <img src="/design/library_hero.png" alt="Library_hero" style="
-                width: 1440px;
-                height: 465px;
-                flex-shrink: 0;
-                aspect-ratio: 96/31;"> -->
-                <!-- <img class="libarary-hero" src="design/Library_hero.png" alt="Library_hero" style ="
-                    width: 100vw; 
-                    aspect-ratio: 96/31;
-                    object-fit: cover;
-                "> -->
+            <div class="latest-project-container">
                 <img class="meowfficer-logo" src="/design/The_meowfficer_logo.png" alt="Meowfficer_logo">
-                <a href="https://store.steampowered.com/app/3464230/The_Meowfficer/?curator_clanid=45435256" target="_blank" rel="noopener noreferrer">
-                    <img class="steam-logo" src="/design/Steam_logo.png" alt="Steam_logo">
-                </a>
-                <a href="https://plankpower.itch.io/the-meowfficer" target="_blank" rel="noopener noreferrer">
-                    <img class="itch-logo" src="/design/itchio-logo.png" alt="itch_logo">
-                </a>
-          </div>
-          <div class="bottom-nav-container">
-            <img src="/design/Side_table_font_logo.png" alt="studio-font">
-            <div class="bottom-links">
-                <a href="/index.html" class="nav-bottom--label">
-                    <img src="/design/side_table_png.png" alt="side_table_png">
-                    <span>Home</span>
-                </a>
-                <a href="/app/html/team.html" class="nav-bottom--label">Team</a>
-                <a href="/app/html/games.html" class="nav-bottom--label">Games</a>
-                <a href="/app/html/socials.html" class="nav-bottom--label">Socials</a>
-                <a href="/app/html/contact.html" class="nav-bottom--label">Contact</a>
-                <div class="bottom-links--socials">
-                    <a href="https://www.instagram.com/side_table_studios/" class="insta-bottom" target="_blank" rel="noopener noreferrer">
-                        <img src="/design/instagram_logo.png" alt="instagram_logo">
-                    </a>
-                    <a href="https://sidetablestudios.etsy.com" class="etsy-bottom" target="_blank" rel="noopener noreferrer">
-                        <img src="/design/etsy_image_black.png" alt="instagram_logo">
-                    </a>
+                <div class="cta-container">
+                    <span>Available On:</span>
+                    <div class="logos">
+                        <a href="https://store.steampowered.com/app/3464230/The_Meowfficer/?curator_clanid=45435256" target="_blank"
+                            rel="noopener noreferrer">
+                            <img class="steam-logo" src="/design/Steam_logo.png" alt="Steam_logo">
+                        </a>
+                        <a href="https://plankpower.itch.io/the-meowfficer" target="_blank" rel="noopener noreferrer">
+                            <img class="itch-logo" src="/design/itchio-logo-black.png" alt="itch_logo">
+                        </a>
+                        <a href="https://gx.games/games/yps1gx/the-meowfficer/" target="_blank" rel="noopener noreferrer">
+                            <img class="gx-logo" src="/design/GX.games Logo.png" alt="gx_logo">
+                        </a>
+                    </div>
                 </div>
             </div>
-          </div>
+            <div class="bottom-nav-container">
+                <img src="/design/Side_table_font_logo.png" alt="studio-font">
+                <div class="bottom-links">
+                    <a href="/index.html" class="nav-bottom--label">
+                        <img src="/design/side_table_png.png" alt="side_table_png">
+                        <span>Home</span>
+                    </a>
+                    <a href="/app/html/team.html" class="nav-bottom--label">Team</a>
+                    <a href="/app/html/games.html" class="nav-bottom--label">Games</a>
+                    <a href="/app/html/socials.html" class="nav-bottom--label">Socials</a>
+                    <a href="/app/html/contact.html" class="nav-bottom--label">Contact</a>
+                    <div class="bottom-links--socials">
+                        <a href="https://www.instagram.com/side_table_studios/" class="insta-bottom" target="_blank" rel="noopener noreferrer">
+                            <img src="/design/instagram_logo.png" alt="instagram_logo">
+                        </a>
+                        <a href="https://sidetablestudios.etsy.com" class="etsy-bottom" target="_blank" rel="noopener noreferrer">
+                            <img src="/design/etsy_image_black.png" alt="instagram_logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
           
             
             <!-- /* .who-we-are {

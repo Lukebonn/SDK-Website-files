@@ -13,11 +13,11 @@
         gap: rem(20);
         padding-left: rem(20);
         padding-right: rem(20);
-        padding-top: rem(20);
+        padding-top: rem(100);
         padding-bottom: rem(60);
         position: relative;
     }
-    @include breakpoint-down('medium') {
+    @include breakpoint-down('small') {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, auto);
     }
@@ -26,13 +26,12 @@
     background-color: #dbd7d7;
     border-radius: rem(25);
     text-align: center;
-
 }
 .team-card--pic img {
     & {
         width: 20vw;
     }
-    @include breakpoint-down(medium) {
+    @include breakpoint-down('medium') {
         width: 25vw;
     }
 }
@@ -42,7 +41,7 @@
         font-weight: normal;
         font-size: 5vw;
     }
-    @include breakpoint-down('medium') {
+    @include breakpoint-down('small') {
         font-size: 6vw;
     }
 }
@@ -59,18 +58,35 @@
         word-wrap: break-word;
 
     }
-    @include breakpoint-down('medium') {
-        font-size: 1vw;
+    @include breakpoint-down('small') {
+        font-size: 1.5vw;
     }
 }
 #Our-latest-project-banner-team {
+    & {
+        position: absolute;
+        bottom: 0.1%; 
+        left: 1%;
+        color: rgba(0, 0, 0, 0.77);
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Black Han Sans;
+        font-size: rem(64);
+        font-style: normal;
+        font-weight: 600; 
+    }
+    @include breakpoint-down('smallmedium') {
+        font-size: rem(40)
+    }
+}
+
+#team-sec-title {
     position: absolute;
-    bottom: 0.1%; 
-    left: 1%;
-    color: rgba(0, 0, 0, 0.77);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Black Han Sans;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 600; 
+    text-align: center;
+    font-family: 'Digitalt';
+    font-weight: 300;
+    font-size: rem(70);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0.5%;
+    white-space: nowrap;
 }

@@ -4,17 +4,119 @@
 
 
 body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: auto;
-    max-width: 100vw;
-    max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.non-scrolling-words-bottom {
+  & {
+    position: absolute; 
+    bottom: 0.1%; 
+    left: 1%; 
+    color: rgba(0, 0, 0, 0.77);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Black Han Sans;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+  }
+  @include breakpoint-down('smallmedium') {
+    font-size: 8vw;
+  }
+}
+
+//switch breakpoint to 750 and switch to viewport sized font-size
+
+.side-table--statement {
+  & {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(0, 0, 0, 0.77);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Black Han Sans;
+    font-size: rem(64);
+    font-style: normal;
+    font-weight: 600; 
+  }
+  @include breakpoint-down('smallmedium') {
+    font-size: 8vw;
+  }
+}
+
+.side-table--statement-intro-container {
+  & {
+    position: relative;
+    display: inline-block;
+    // border-radius: 1rem;
+    // overflow: hidden;
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%) translateY(rem(150));
+    text-align: center;
+    // border: 1px solid red;
+  }
+  @include breakpoint-down('smallmedium') {
+    font-size: 8vw;
+    width: 70%;
+  }
+}
+
+.side-table--statement-intro-background {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+  filter: blur(rem(30));
+  z-index: 1;
+  -webkit-mask-image: radial-gradient(circle at center, white 0%, transparent 100%);
+  mask-image: radial-gradient(circle at center, white 0%, transparent 100%);
+}
+
+.side-table--statement-intro-text {
+  & {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-style: normal;
+    font-size: 2vh;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: rem(30);
+    backdrop-filter: blur(10px);
+    -webkit-mask-image: radial-gradient(
+      circle at center,
+      rgba(0,0,0,1) 60%,    
+      rgba(0,0,0,0) 100%    
+    );
+    mask-image: radial-gradient(
+      circle at center,
+      rgba(0,0,0,1) 60%,
+      rgba(0,0,0,0) 100%
+    );
+  }
+  // transform: translateY(-rem(70));
+  // text-align: center;
+  @include breakpoint-down('smallmedium') {
+    
+  }
 }
 
 //gradient background
 .fullscreen-gradient {
   position: relative;
   justify-content: space-between;
+  // change height in games.html as well if changed
+  height: rem(400);
 }
 
 // .non-scrolling-words-box, .scrolling-words-box {
@@ -25,19 +127,18 @@ body, html {
   text-align: center;
   font-weight: 600;
   white-space: nowrap;
-  position: absolute;
-  top: 40%;
-  left: 5%;
   // border: 2px solid red;
-  display: flex;
-  // align-items: center;
-  // justify-content: center;
+  display: inline-block;
+  vertical-align: middle;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  // float: left;
+  margin-left: 5%;
 }
 
 //scrolling animation
 .scrolling-words-container {
-  display: flex;
+  display: inline-block;
+  vertical-align: middle;
   height: 8vh;
   align-items: center;
   padding: rem(10) rem(30);
@@ -45,27 +146,24 @@ body, html {
   font-weight: 600; 
   overflow: hidden;
   gap: 1vw;
-  // border: 2px solid red;
+  // float: left;
+  margin-left: rem(-30);
+  position: relative;
+  border: 2px solid red;
 }
   
 .scrolling-words-box {
-  @include breakpoint-down(medium) {
-    transform: translateX(rem(-210));
-    height: 5vh;
-  }
   & {
   height: 11vh;
   margin: auto;
-  overflow: hidden;
-  position: absolute;
-  top: 40%;
-  right: 5%;
+  // overflow: hidden;
   transform: translateY(rem(50));
-  // justify-content: space-between;
-  // right: 10%;
+  float: left;
+  margin-left: rem(-30);
+
 
   //default for large 1440px screens
-  transform: translateX(rem(-275));
+  // transform: translateX(rem(-275));
 
   }
   // border: 2px solid red;
@@ -78,6 +176,7 @@ body, html {
           opacity: 1;
           align-items: center;
           justify-content: flex-start;
+          display: flex;
           text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           width: 100%;
           list-style: none; 

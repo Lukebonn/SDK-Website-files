@@ -1,0 +1,187 @@
+@use "../util/functions" as *;
+@use "../globals/fonts" as *;
+@use "../util/breakpoints" as *;
+
+.games {
+    display: table;
+    flex-direction: column;
+}
+
+ul.games {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+.game {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    font-family: Inkut Antiqua Regular;
+    color: #111;
+    a {
+            text-decoration: none;
+            outline: none;
+            border: none;
+        }
+
+    &__container {
+        & {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: rem(50);
+            margin-bottom: rem(180);
+            padding-left: rem(50);
+            padding-right: rem(50);
+            // border: rem(1) solid red;
+        }
+
+        .game__bridgette & {
+            margin-bottom: rem(100);
+        }
+
+
+        @include breakpoint-down('smallmedium') {
+            display: flex;
+            flex-direction: column;
+            margin-left: rem(50);
+            margin-right: rem(50);
+        }
+    }
+
+    &__info {
+        & {
+             margin-left: rem(300);
+             display: block;
+        }
+        @include breakpoint-down('smallmedium') {
+            display: block;
+            margin-left: rem(-50);
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+        padding: 0;
+        font-size: rem(40);
+        font-weight: 700;
+        line-height: 1.2;
+        max-height: none; 
+        overflow: visible;
+    }
+
+    &__description {
+        line-height: 1.6;
+        margin-bottom: 1.5em;
+    }
+
+    &__cta {
+        display: block;
+        span {
+        font-weight: bold;
+        display: block;
+        }
+        img {
+            display: inline-block;
+            height: rem(40);
+            background-color: white;
+            border-radius: rem(2);
+            margin-right: rem(5);
+            border: rem(1) solid black;
+        }
+    }
+
+    &__media {
+        img {
+            & {
+                float: left;
+                height: rem(380);
+            }
+            @include breakpoint-down('smallmedium') {
+                margin-left: rem(-50);
+            }
+        }
+        .game__bridgette & {
+            img {
+                height: rem(252);
+            }
+        }
+    }
+
+}
+
+#meowfficer-game-bio {
+    height: rem(3);
+    all: unset;
+    display: block;
+    background-color: #EC1112;
+}
+
+#bridgette-game-bio {
+    height: rem(3);
+    all: unset;
+    display: block;
+    background-color: #FDFDFD;
+}
+
+#game-separator {
+    height: rem(3);
+    width: 100vw;
+    all: unset;
+    display: block;
+    background-color: black;
+}
+
+.game__meowfficer {
+    & {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding: rem(10);
+        // border: rem(1) solid red;
+        // aspect-ratio: 16/9;
+        width: 100vw;
+        background-image: url("/design/Meowfficer_game_background.png");
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        flex: 1 1 auto;
+        // height: 50vh;
+        // max-height: rem(550);
+        // min-height: rem(550);
+        height: auto;
+        min-height: unset;
+        max-height: unset;
+        background-repeat: no-repeat;
+    }
+    // @include breakpoint-down('smallmedium') {
+        
+    // }
+}
+
+.game__bridgette {
+
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: rem(10);
+    // border: rem(1) solid red;
+    // aspect-ratio: 16/9;
+    width: 100vw;
+    background-image: url("/design/Bridgette_and_the_bugs_game_background.png");
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    flex: 1 1 auto;
+    // height: 50vh;
+    // max-height: rem(550);
+    // min-height: rem(550);
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    background-repeat: no-repeat;
+}

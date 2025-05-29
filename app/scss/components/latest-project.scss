@@ -1,11 +1,13 @@
 @use "../util/functions" as *;
 @use "../globals/fonts" as *;
+@use "../util/breakpoints" as *;
 
 .latest-project-container {
     background-image: url("/design/Library_hero.png");
     aspect-ratio: 96/31;
     background-size: cover;
     position: relative;
+    display: flex;
 }
 
 .meowfficer-logo {
@@ -17,28 +19,84 @@
     top: 1%;
 }
 
+.cta-container {
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    position: absolute;
+    flex-direction: column;
+    width: 100vw;
+    top: 50%;
+    left: 5%;
+    span {
+        display: block;
+        font-weight: bold;
+        font-size: rem(25);
+        color: white;
+        font-family: Inkut Antiqua Regular;
+        height: rem(25);
+        max-height: none;
+        padding: 0;
+        margin-top: 0;
+        line-height: 1.2;
+        margin-bottom: rem(20);
+    }
+    a {
+        text-decoration: none;
+        outline: none;
+        border: none;
+    }
+}
+
 .steam-logo {
-    height: 10%;
-    flex-shrink: 0;
-    aspect-ratio: 131/67;
-    border-radius: 10px;
-    background:#FFF;
-    position: absolute; 
-    bottom: 35%; 
-    left: 5%; 
+    & {
+        display: inline-block;
+        height: rem(50);
+        flex-shrink: 0;
+        // aspect-ratio: 131/67;
+        border-radius: rem(2);
+        border: rem(2) solid black;
+        background:#FFF;
+        margin-right: rem(20);
+    }
+    @include breakpoint-down('smallmedium') {
+        height: rem(30);
+        margin-right: rem(10);
+    }
 }
 
 .itch-logo {
-    width: rem(132);
-    height: rem(44);
-    flex-shrink: 0;
-    aspect-ratio: 132.41/34.00;
-    border-radius: 10px;
-    background:#FFF;
-    position: absolute; 
-    border-style: solid;
-    border-width: rem(8);
-    border-color: white;
-    bottom: 35%;
-    left: 13%;
+    & {
+        // width: rem(132);
+        // height: rem(44);
+        display: inline-block;
+        height: rem(50);
+        flex-shrink: 0;
+        // aspect-ratio: 132/34;
+        border-radius: rem(2);
+        border: rem(2) solid black;
+        background:#FFF;
+        margin-right: rem(20);
+    }
+    @include breakpoint-down('smallmedium') {
+        height: rem(30);
+        margin-right: rem(10);
+    }
+}
+
+.gx-logo {
+    & {
+        display: inline-block;
+        height: rem(50);
+        flex-shrink: 0;
+        background: #FFF;
+        border-radius: rem(2);
+        border: rem(2) solid black;
+    }
+    @include breakpoint-down('smallmedium') {
+        height: rem(30);
+        margin-right: rem(10);
+    }
 }

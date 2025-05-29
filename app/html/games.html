@@ -6,32 +6,38 @@
         <script defer src="dist/script.js"></script>
     </head>
     <body>
-        <div class="nav-wrap">
-            <div class="nav-right">
-                <a href="/app/html/team.html" class="nav--label">Team</a>
-                <a href="/app/html/games.html" class="nav--label">Games</a>
-                <a href="/app/html/socials.html" class="nav--label">Socials</a>
-                <a href="/app/html/contact.html" class="nav--label">Contact</a>
-            </div>
-            <div class="nav-left">
-                <a href="/index.html" class="nav--label--table">
-                    <img src="/design/side_table_png.png" alt="side_table_png">
-                </a>
-            </div>
-        </div>
         <div class="studio-logo">
-            <img class="studio-logo" src="/design/Studio_logo_transparent.png" alt="Studio Logo Transparent">
+            <div class="nav-wrap">
+                <div class="nav-right">
+                    <a href="/app/html/team.html" class="nav--label">Team</a>
+                    <a href="/app/html/games.html" class="nav--label">Games</a>
+                    <a href="/app/html/socials.html" class="nav--label">Socials</a>
+                    <a href="/app/html/contact.html" class="nav--label">Contact</a>
+                </div>
+                <div class="nav-left">
+                    <a href="/index.html" class="nav--label--table">
+                        <img src="/design/side_table_png.png" alt="side_table_png">
+                    </a>
+                </div>
+            </div>
+
+            <img class="studio-logo1" src="/design/Studio_logo_transparent.png" alt="Studio Logo Transparent">
             <img class="studio-logo-background" src="/design/Studio_logo_bckgrd_pattern.png" alt="Studio Logo Background">
         </div>
         <div class="who-we-are">
             <div id="grad1"></div>
         </div>
         <div class="fullscreen-gradient" style="
-            height: 100vh; 
             width: 100vw; 
             background-image: linear-gradient(to right, #457a86, #D2D2D2); 
             position: relative;">
-            <div class="scrolling-words-container">
+            <span class="side-table--statement">We Are Side Table Studios</span>
+            <div class="side-table--statement-intro-container">
+                <div class="side-table--statement-intro-background"></div>
+                <span class="side-table--statement-intro-text">"We are a team of college students producing innovative games by
+                    leveraging the unique skills each of our team members have. We hope you enjoy our games!"</span>
+            </div>
+            <!-- <div class="scrolling-words-container">
                 <div class="non-scrolling-words-box">We Are</div>
                 <div class="scrolling-words-box">
                   <ul>
@@ -45,40 +51,82 @@
                     <li style="color: #059400">Innovators</li>
                   </ul>
                 </div>
-            </div>
-            <div class="non-scrolling-words-bottom" style=" 
-            position: absolute; 
-            bottom: 0.1%; 
-            left: 1%; 
-            color: rgba(0, 0, 0, 0.77);
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            font-family: Black Han Sans;
-            font-size: 64px;
-            font-style: normal;
-            font-weight: 600;">Our Latest Project:
-            </div>
+            </div> -->
           </div>
-          <div class="latest-project-container">
-            <!-- 
-            <img src="/design/library_hero.png" alt="Library_hero" style="
-                width: 1440px;
-                height: 465px;
-                flex-shrink: 0;
-                aspect-ratio: 96/31;"> -->
-                <!-- <img class="libarary-hero" src="design/Library_hero.png" alt="Library_hero" style ="
-                    width: 100vw; 
-                    aspect-ratio: 96/31;
-                    object-fit: cover;
-                "> -->
-                <img class="meowfficer-logo" src="/design/The_meowfficer_logo.png" alt="Meowfficer_logo">
-                <a href="https://store.steampowered.com/app/3464230/The_Meowfficer/?curator_clanid=45435256" target="_blank" rel="noopener noreferrer">
-                    <img class="steam-logo" src="/design/Steam_logo.png" alt="Steam_logo">
-                </a>
-                <a href="https://plankpower.itch.io/the-meowfficer" target="_blank" rel="noopener noreferrer">
-                    <img class="itch-logo" src="/design/itchio-logo.png" alt="itch_logo">
-                </a>
-          </div>
-          <div class="bottom-nav-container">
+
+          <!-- games section -->
+
+          <ul class="games">
+            <li 
+            class="game game__meowfficer"
+            >
+                <div class="game__container">
+                    <div class="game__media">
+                        <img src="/design/The_Meowfficer_portrait.png" alt="the-meowfficer">
+                    </div>
+                    <div class="game__info">
+                        <div class="game__title">The Meowfficer</div>
+                        <p class="game__description"><strong>The Meowfficer</strong> is top-down single-player pixelated RPG, you play as a cat in the police force, talking with your allies, fighting in intense gun fights, unraveling the lore, and making moral decisions.</p>
+                        <hr id="meowfficer-game-bio">
+                        <div class="game__cta">
+                            <span>Available On</span>
+                            <a href="https://store.steampowered.com/app/3464230/The_Meowfficer/?curator_clanid=45435256" target="_blank"
+                                rel="noopener noreferrer">
+                                <img class="game__platform" src="/design/Steam_logo.png" alt="steam-logo">
+                            </a>
+                            <a href="https://plankpower.itch.io/the-meowfficer" target="_blank" rel="noopener noreferrer">
+                                <img class="game__platform" src="/design/itchio-logo-black.png" alt="itch-logo">
+                            </a>
+                            <a href="https://gx.games/games/yps1gx/the-meowfficer/" target="_blank" rel="noopener noreferrer">
+                                <img class="game__platform" src="/design/GX.games Logo.png" alt="gxgames-logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- game 1 END -->
+            <hr id="game-separator">
+            <!-- game 2 START -->
+            <li 
+            class="game game__bridgette"
+            >
+                <div class="game__container">
+                    <div class="game__media">
+                        <img src="/design/Bridgette_portrait.png" alt="the-meowfficer">
+                    </div>
+                    <div class="game__info">
+                        <div class="game__title">Bridgette and The Bugs</div>
+                        <p class="game__description"><strong>Bridgette and The Bugs</strong> is a bridge-building survival game in which you play as Bridgette, a clever spider weaving her web across a flooded
+                        world. As invasive bugs attempt to expand their territory, you must outsmart them, construct bridges, and spread your
+                        web to survive.</p>
+                        <hr id="bridgette-game-bio">
+                        <div class="game__cta">
+                            <span>Available On</span>
+                            <img class="game__platform" src="/design/itchio-logo-black.png" alt="itch-logo">
+                        </div>
+                    </div>
+                </div>
+                <span id="Our-latest-project-banner-team">Our Latest Project:</span>
+            </li>
+        </ul>
+        <div class="latest-project-container">
+            <img class="meowfficer-logo" src="/design/The_meowfficer_logo.png" alt="Meowfficer_logo">
+            <div class="cta-container">
+                <span>Available On:</span>
+                <div class="logos">
+                    <a href="https://store.steampowered.com/app/3464230/The_Meowfficer/?curator_clanid=45435256" target="_blank" rel="noopener noreferrer">
+                        <img class="steam-logo" src="/design/Steam_logo.png" alt="Steam_logo">
+                    </a>
+                    <a href="https://plankpower.itch.io/the-meowfficer" target="_blank" rel="noopener noreferrer">
+                        <img class="itch-logo" src="/design/itchio-logo-black.png" alt="itch_logo">
+                    </a>
+                    <a href="https://gx.games/games/yps1gx/the-meowfficer/" target="_blank" rel="noopener noreferrer">
+                        <img class="gx-logo" src="/design/GX.games Logo.png" alt="gx_logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav-container">
             <img src="/design/Side_table_font_logo.png" alt="studio-font">
             <div class="bottom-links">
                 <a href="/index.html" class="nav-bottom--label">
@@ -98,32 +146,6 @@
                     </a>
                 </div>
             </div>
-          </div>
-          
-            
-            <!-- /* .who-we-are {
-                display: flex; /* Align gradients horizontally */
-                /* width: 100%;
-                height: 1097px;
-                } */
-                /* #grad1 {
-                    height: rem(1097);
-                    background-image: linear-gradient(270deg, #D9D9D9 0%, rgba(166, 166, 166, 0.63) 85.1%, #D9D9D9 100%,  #D9D9D9 0%, rgba(166, 166, 166, 0.63) 18.6%, #D9D9D9 100%, 270deg, #D9D9D9 0%, rgba(166, 166, 166, 0.63) 18.6%, #D9D9D9 100%);
-                } */
-            /* #grad1 {
-                width: 287px;
-                height: 1097px;
-                background: linear-gradient(270deg, #D9D9D9 0%, rgba(166, 166, 166, 0.63) 85.1%, #D9D9D9 100%);
-            }
-            #grad2 {
-                width: 882px;
-                height: 1097px;
-                background: linear-gradient(270deg, #D9D9D9 0%, rgba(166, 166, 166, 0.63) 18.6%, #D9D9D9 100%);
-            }
-            #grad3 {
-                width: 271px;
-                height: 1097px;
-                background: linear-gradient(270deg, #D9D9D9 0%, rgba(166, 166, 166, 0.63) 18.6%, #D9D9D9 100%);
-            } */ -->
+        </div>
     </body>
 </html>
