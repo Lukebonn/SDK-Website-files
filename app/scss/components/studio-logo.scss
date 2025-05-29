@@ -12,34 +12,39 @@ body::-webkit-scrollbar {
     display: none;
 } 
 
-.studio-logo img {
+.studio-logo1 {
     align-items: center;
     justify-content: center;
-    object-fit: fill;
+    // object-fit: fill;
     top: 0;
     left: 0;
+    padding-top: rem(20);
     overflow: hidden;
+    height: rem(280);
+    aspect-ratio: 288/157;
+    z-index: 20;
 }
 .studio-logo {
     flex-direction: column;
     display: flex;
     width: 100vw;
-    height: 100vh; 
-    object-fit: fill;
+    // height: 100vh; 
+    // object-fit: fill;
     position: relative;
-    z-index: 20;
     margin-bottom: 0;
     align-items: center;
     justify-content: center;
     margin: 0;
     padding: 0;
+    height: rem(300);
+    overflow: hidden;
 }
 .studio-logo-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Make sure it fills `.studio-logo` */
-    object-fit: fill;
+    overflow: hidden;
+    // object-fit: fill;
     z-index: 10;
 }
