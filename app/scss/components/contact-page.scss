@@ -2,10 +2,6 @@
 @use "../globals/fonts" as *;
 @use "../util/breakpoints" as *;
 
-* {
-    outline: rem(1) solid red;
-}
-
 #big-sec-separator {
     height: rem(3);
     width: 100%;
