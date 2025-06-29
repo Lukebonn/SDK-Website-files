@@ -18,13 +18,13 @@ body, html {
     left: 1%; 
     color: rgba(0, 0, 0, 0.77);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Black Han Sans;
-    font-size: 64px;
+    font-family: 'Digitalt';
+    font-size: rem(64);
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
   }
   @include breakpoint-down('smallmedium') {
-    font-size: 8vw;
+    font-size: rem(42);
   }
 }
 

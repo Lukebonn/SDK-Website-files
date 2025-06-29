@@ -8,17 +8,28 @@
     background-size: cover;
     position: relative;
     display: flex;
-}
 
+    @include breakpoint-down('smallmedium') {
+        background-image: url('/design/Library_hero_extended.jpeg');
+        aspect-ratio: unset;
+        width: 100%;
+        height: rem(220);
+    }
+}
 .meowfficer-logo {
-    height: 50%;
+    height: 60%;
     flex-shrink: 0;
     aspect-ratio: 677/275;
     position: absolute;
     left: 5%;
     top: 1%;
+    @include breakpoint-down('smallmedium') {
+        height: 50%;
+    }
+    @include breakpoint-down('smallsmall') {
+        height: 40%;
+    }
 }
-
 .cta-container {
     overflow: hidden;
     text-decoration: none;
@@ -27,8 +38,8 @@
     align-items: left;
     position: absolute;
     flex-direction: column;
-    width: 100vw;
-    top: 50%;
+    width: 50%;
+    top: 55%;
     left: 5%;
     span {
         display: block;
@@ -47,6 +58,13 @@
         text-decoration: none;
         outline: none;
         border: none;
+    }
+    @include breakpoint-down('smallmedium') {
+        top: 50%;
+        width: 70%;
+    }
+    @include breakpoint-down('smallsmall') {
+        top: 40%;
     }
 }
 
@@ -97,6 +115,7 @@
     }
     @include breakpoint-down('smallmedium') {
         height: rem(30);
+        margin-top: rem(7);
         margin-right: rem(10);
     }
 }

@@ -13,56 +13,116 @@ body::-webkit-scrollbar {
     display: none;
 } 
 
-.studio-logo1 {
-    & {
-        align-items: center;
-        justify-content: center;
-        // object-fit: fill;
-        top: 0;
-        left: 0;
-        padding-top: rem(20);
-        overflow: hidden;
-        height: rem(280);
-        aspect-ratio: 288/157;
-        z-index: 20;
-    }
-    @include breakpoint-down('small') {
-        height: rem(150);
-    }
-}
 .studio-logo {
     & {
         position: relative;
         flex-direction: column;
         display: flex;
         width: 100vw;
-        // height: 100vh; 
-        // object-fit: fill;
         position: relative;
         margin-bottom: 0;
         align-items: center;
-        justify-content: center;
+        // justify-content: center;
         margin: 0;
         padding: 0;
-        height: rem(300);
-        overflow: hidden;
+        height: $laptop-studio-logo-height;
+        overflow: visible;
     }
-    @include breakpoint-down('small') {
-        height: rem(200);
+
+    // @include breakpoint-down('small') {
+    //     height: rem(200);
+    // }
+
+    @include breakpoint-down('smallmedium') {
+        // height: $top-nav-height;
+        height: $top-nav-height-small + $studio-logo-height;
+        // margin-top: $top-nav-height;
+        // padding-bottom: $studio-logo-height;
     }
 }
+.studio-logo.show {
+    height: $top-nav-height-big + $studio-logo-height;
+}
+.container__studio-logo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    object-fit: contain;
+    height: $laptop-studio-logo-height;
+    @include breakpoint-down('smallmedium') {
+        display: grid;
+        position: relative;
+        width: 100%;
+        height: $studio-logo-height;
+    }
+}
+
+.studio-logo1, .studio-logo-background {
+    @include breakpoint-down('smallmedium') {
+        grid-area: 1 / 1;
+    }
+}
+
+.studio-logo1 {
+    & {
+        position: relative;
+        align-items: center;
+        left: 50%;
+        transform: translate(rem(-260.5), rem(90));
+        overflow: hidden;
+        height: rem(320);
+        aspect-ratio: 288/157;
+        z-index: 20;
+    }
+    @include breakpoint-down('small') {
+        left: 0;
+        transform: none;
+        position: relative;
+        height: unset;
+        max-height: $studio-logo-height;
+        object-fit: contain;
+        width: 100%;
+        padding-top: 0;
+    }
+    @include breakpoint-down('smallsmall') {
+        // height: rem(150);
+        left: 0;
+        transform: none;
+        position: relative;
+        height: unset;
+        max-height: $studio-logo-height;
+        object-fit: contain;
+        width: 100%;
+        padding-top: 0;
+    }
+    // @include breakpoint-down('smallmedium') {
+    //     margin-top: $top-nav-height;
+    // }
+}
+
 .studio-logo-background {
     & {
+        min-height: $laptop-studio-logo-height;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        overflow: hidden;
+        // height: rem(400);
+        overflow: clip;
         filter: brightness(1.5);
-        // object-fit: fill;
-        z-index: 10;
+        object-fit: fill;
+        z-index: 0;
     }
-    @include breakpoint-down('small') {
-        height: rem(200);
+    @include breakpoint-down('smallmedium') {
+        object-fit: unset;
+        position: relative;
+        min-height: $studio-logo-height;
+        height: 100%;
+        width: 100vw;
     }
+    // @include breakpoint-down('smallmedium') {
+    //     margin-top: $top-nav-height;
+    // }
 }

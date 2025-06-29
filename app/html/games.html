@@ -4,26 +4,40 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="/dist/style.css">
         <script defer src="dist/script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class="studio-logo">
+            <button onclick="menuDropFunction()" type="button" id="dropbtn" class="menu-dropbtn">
+                <img src="/design/menu_icon.png" alt="menu_icon">
+            </button>
             <div class="nav-wrap">
                 <div class="nav-right">
-                    <a href="/app/html/team.html" class="nav--label">Team</a>
-                    <a href="/app/html/games.html" class="nav--label">Games</a>
-                    <a href="/app/html/socials.html" class="nav--label">Socials</a>
-                    <a href="/app/html/contact.html" class="nav--label">Contact</a>
+                    <div id="drop-menu" class="container__nav--label">
+                        <hr id="nav-item-separator">
+                        <a href="/app/html/team.html" class="nav--label">Team</a>
+                        <hr id="nav-item-separator">
+                        <a href="/app/html/games.html" class="nav--label">Games</a>
+                        <hr id="nav-item-separator">
+                        <a href="/app/html/socials.html" class="nav--label">Socials</a>
+                        <hr id="nav-item-separator">
+                        <a href="/app/html/contact.html" class="nav--label">Contact</a>
+                    </div>
                 </div>
                 <div class="nav-left">
+                    <hr id="nav-item-separator">
                     <a href="/index.html" class="nav--label--table">
+                        <span>Home</span>
                         <img src="/design/side_table_png.png" alt="side_table_png">
                     </a>
                 </div>
             </div>
-
-            <img class="studio-logo1" src="/design/Studio_logo_transparent.png" alt="Studio Logo Transparent">
-            <img class="studio-logo-background" src="/design/Studio_logo_bckgrd_pattern.png" alt="Studio Logo Background">
+            <div class="container__studio-logo-img">
+                <img class="studio-logo1" src="/design/Studio_logo_transparent.png" alt="Studio Logo Transparent">
+                <img class="studio-logo-background" src="/design/Studio_logo_bckgrd_pattern.png" alt="Studio Logo Background">
+            </div>
         </div>
+        <script src="/dist/listeners.js"></script>
         <div class="who-we-are">
             <div id="grad1"></div>
         </div>
@@ -37,25 +51,8 @@
                 <span class="side-table--statement-intro-text">"We are a team of college students producing innovative games by
                     leveraging the unique skills each of our team members have. We hope you enjoy our games!"</span>
             </div>
-            <!-- <div class="scrolling-words-container">
-                <div class="non-scrolling-words-box">We Are</div>
-                <div class="scrolling-words-box">
-                  <ul>
-                    <li style="color: #ea4335">Side Table Studios</li>
-                    <li style="color: #4285f4">Programmers</li>
-                    <li style="color: #34a853">Artists</li>
-                    <li style="color: #fbbc04">Designers</li>
-                    <li style="color: #ea4335">Students</li>
-                    <li style="color: #c55923">Collaborators</li>
-                    <li style="color: #c5c023">Story-tellers</li>
-                    <li style="color: #059400">Innovators</li>
-                  </ul>
-                </div>
-            </div> -->
           </div>
-
           <!-- games section -->
-
           <ul class="games">
             <li 
             class="game game__meowfficer"
@@ -106,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                <span id="Our-latest-project-banner-team">Our Latest Project:</span>
+                <span id="Our-latest-project-banner-team">Our Latest Creation:</span>
             </li>
         </ul>
         <div class="latest-project-container">
@@ -129,21 +126,30 @@
         <div class="bottom-nav-container">
             <img src="/design/Side_table_font_logo.png" alt="studio-font">
             <div class="bottom-links">
-                <a href="/index.html" class="nav-bottom--label">
-                    <img src="/design/side_table_png.png" alt="side_table_png">
-                    <span>Home</span>
-                </a>
-                <a href="/app/html/team.html" class="nav-bottom--label">Team</a>
-                <a href="/app/html/games.html" class="nav-bottom--label">Games</a>
-                <a href="/app/html/socials.html" class="nav-bottom--label">Socials</a>
-                <a href="/app/html/contact.html" class="nav-bottom--label">Contact</a>
-                <div class="bottom-links--socials">
-                    <a href="https://www.instagram.com/side_table_studios/" class="insta-bottom" target="_blank" rel="noopener noreferrer">
-                        <img src="/design/instagram_logo.png" alt="instagram_logo">
+                <div class="bottom-links__column">
+                    <span class="bottom-links__header" id="bottom-links-header-nav">Navigation</span>
+                    <a href="/index.html" class="nav-bottom--label">
+                        <img src="/design/side_table_png.png" alt="side_table_png">
+                        <span id="nav-bottom--label--home">Home</span>
                     </a>
-                    <a href="https://sidetablestudios.etsy.com" class="etsy-bottom" target="_blank" rel="noopener noreferrer">
-                        <img src="/design/etsy_image_black.png" alt="instagram_logo">
-                    </a>
+                    <a href="/app/html/team.html" class="nav-bottom--label"><span>Team</span></a>
+                    <a href="/app/html/games.html" class="nav-bottom--label"><span>Games</span></a>
+                    <a href="/app/html/socials.html" class="nav-bottom--label"><span>Socials</span></a>
+                    <a href="/app/html/contact.html" class="nav-bottom--label"><span>Contact</span></a>
+                </div>
+                <div class="bottom-links__column">
+                    <span class="bottom-links__header" 
+                    id="bottom-links-header-socials">Support Us!</span>
+                    <div class="bottom-links--socials">
+                        <a href="https://www.instagram.com/side_table_studios/" 
+                        class="insta-bottom" target="_blank" rel="noopener noreferrer">
+                            <img src="/design/instagram_logo.png" alt="instagram_logo">
+                        </a>
+                        <a href="https://sidetablestudios.etsy.com" 
+                        class="etsy-bottom" target="_blank" rel="noopener noreferrer">
+                            <img src="/design/etsy_image_black.png" alt="instagram_logo">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

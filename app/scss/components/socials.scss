@@ -8,8 +8,11 @@
     display: flex;
     flex-direction: column;
 }
-
+.socials {
+    background-color: #e1e1f0;
+}
 #socials-insta-intro {
+    width: 100%;
     position: absolute;
     text-align: center;
     font-family: 'Digitalt';
@@ -27,6 +30,13 @@
     span:hover {
         text-decoration: underline;
         color: #131947;
+    }
+    @include breakpoint-down('smallmedium') {
+        font-size: rem(50);
+        width: 100%;
+        // span {
+            
+        // }
     }
 }
 

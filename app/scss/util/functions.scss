@@ -3,3 +3,18 @@
 @function rem($pixels, $context: 16) {
 	@return (math.div($pixels, $context)) * 1rem;
 }
+
+//variables
+
+$top-nav-height-big: rem(242);
+$top-nav-height-small: rem(41);
+$studio-logo-height: rem(200);
+$laptop-studio-logo-height: rem(500);
+
+:root {
+	--top-nav-height: #{rem(242)};
+}
+
+:root {
+	--studio-logo-height: #{rem(200)};
+}

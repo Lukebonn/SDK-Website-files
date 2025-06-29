@@ -6,8 +6,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
-//1001 fonts and open foundry fonts
 @font-face {
     font-family: 'Arcade Classic';
     src: url(/design/ARCADECLASSIC.TTF);
@@ -27,4 +25,20 @@
 @font-face {
     font-family: 'Inkut Antiqua Regular';
     src: url(/design/InknutAntiqua-Regular.ttf);
+}
+@font-face {
+    font-family: 'Joystix Monospace';
+    src: url(/design/joystix-monospace.otf);
+}
+@font-face {
+    font-family: 'ByteBounce';
+    src: url(/design/ByteBounce.ttf);
+}
+@font-face {
+    font-family: 'Bedda';
+    src: url(/design/Bedda.ttf);
+}
+@font-face {
+    font-family: 'Velvo';
+    src: url(/design/VELVO.ttf) format(truetype);
 }

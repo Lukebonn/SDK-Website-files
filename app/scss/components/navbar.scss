@@ -1,68 +1,206 @@
 @use "../util/functions" as *;
 @use "../globals/fonts" as *;
+@use "../util/breakpoints" as *;
+
+// * {
+//     outline: 1px solid red;
+// }
 
 .nav-wrap {
-    overflow: hidden;
-    height: 100%;
+    overflow: visible;
+    height: rem(42);
     width: rem(435);
     z-index: 30;
-    position: absolute;
-    // position: fixed; //--> addition that removes it
-    // background-color: rgba(255, 255, 255, 0.9);
-}
-
-.nav-left {
-    width: rem(35);
-    height: rem(35);
-    background-color: #A68359;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-#{rem(175+34)});
-    z-index: 30;
-}
-.nav-left:hover {
-    background-color: #b59875;
-}
-// .nav-left a {
-//     display: block;
-//     width: 100%;
-//     height: 100%;
-// }
-.nav-left img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.nav--label--table {
-    width: 100%;
-    height: 100%;
+    // padding-bottom: rem(200);
+    position: relative;
+    overflow: hidden;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    @include breakpoint-down('smallmedium') {
+        display: table;
+        height: var(--top-nav-height);
+        width: 100%;
+        position: relative;
+        top: 0%;
+        padding: 0;
+        margin: 0%;
+    }
 }
 
-// .nav-left img {
-//     width: rem(35);
-//     height: rem(35);
+.menu-dropbtn {
+    position: absolute;
+    z-index: 40;
+    display: none;
+    img {
+        display: none;
+        visibility: hidden;
+    }
+    @include breakpoint-down('smallmedium') {
+        background: transparent; 
+        border: none;
+        display: block;
+        width: 100%;
+        height: rem(41);
+        // button {
+        //     opacity: 0.1;
+        // }
+        img {
+            visibility: visible;
+            position: absolute;
+            top: rem(7);
+            left: rem(10);
+            display: block;
+            visibility: visible;
+            height: rem(25);
+            width: rem(25);
+        }
+    }
+}
+// .menu-dropbtn.show {
+//     @include breakpoint-down('smallmedium') {
+//         img {
+//             background-color: black;
+//             width: rem(20);
+//         }
+//     }
 // }
 
 .nav-right {
     width: rem(350);
     height: rem(35);
     background-color: #7491b4;
-    position: absolute;
-    top: 0;
+    top: 0%;
     left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transform: translateX(24%);
     z-index: 30;
+    // .container__nav--label {
+    //     outline: 1px solid red;
+    // }
+
+    @include breakpoint-down('smallmedium') {
+        height: rem(41);
+        transform: none;
+        left: 0;
+        width: 100%;
+        position: relative;
+        display: flex;
+        // outline: 1px solid red;
+        .container__nav--label {
+            flex-direction: column;
+        }
+        img {
+            visibility: visible;
+            display: inline-block;
+            position: relative;
+            left: rem(10);
+            top: rem(9);
+            background-color: transparent;
+            // outline: 1px solid red;
+        }
+    }
 }
 
+.nav-right.show {
+    @include breakpoint-down('smallmedium') {
+        height: rem(242);
+    }
+}
+.nav-left {
+    position: absolute;
+    display: block;
+    width: rem(35);
+    height: rem(35);
+    background-color: #A68359;
+    top: 0;
+    left: 50%;
+    transform: translateX(-#{rem(168)});
+    z-index: 30;
+    span {
+        display: none;
+    }
+
+    @include breakpoint-down('smallmedium') {
+        display: none;
+        // display: block;
+        // width: 100%;
+        // position: absolute;
+        // height: rem(39);
+        // left: 0;
+        // top: rem(41);
+        // transform: none;
+        // z-index: 200;
+    }
+}
+.nav-left:hover {
+    background-color: #c3a683;
+}
+.nav-left.show {
+    @include breakpoint-down('smallmedium') {
+        display: block;
+        width: 100%;
+        position: absolute;
+        height: rem(39);
+        left: 0;
+        top: rem(41);
+        transform: none;
+        z-index: 200;
+        span {
+            display: block;
+        }
+    }
+}
+.nav-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // transform: translateX(rem(-17.5));
+
+    @include breakpoint-down('smallmedium') {
+        visibility: collapse;
+    }
+}
+.nav--label--table {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-decoration: none;
+    span {
+        padding: rem(10) rem(10);
+        text-align: center;
+        color: #000;
+        font-family: 'Timeburner', sans-serif;
+        font-size: rem(15);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        text-decoration: none;
+        visibility: collapse;
+    }
+    @include breakpoint-down('smallmedium') {
+        span {
+            visibility: visible;
+        }
+    }
+}
+.container__nav--label {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint-down('smallmedium') {
+        position: absolute;
+        display: none;
+        width: 100%;
+        margin-top: rem(80);
+        text-align: left;
+        align-items: left;
+        justify-content: flex-start;
+        // outline: 1px solid red;
+    }
+}
 .nav--label {
-    padding: rem(7.5) rem(20.5);
+    padding: rem(6.25) rem(20.5);
     text-align: center;
     color: #000;
     font-family: 'Timeburner', sans-serif;
@@ -71,13 +209,43 @@
     font-weight: 500;
     line-height: 150%;
     text-decoration: none;
-}
 
+    @include breakpoint-down('smallmedium') {
+        height: rem(40);
+        width: 100%;
+        text-align: left;
+        justify-content: left;
+        margin: auto;
+        padding: rem(10) rem(10);
+        // outline: 1px solid red;
+    }
+}
+.container__nav--label.show {
+    @include breakpoint-down('smallmedium') {
+        display: flex;
+    }
+}
+#nav-item-separator {
+    display: none;
+    @include breakpoint-down('smallmedium') {
+        height: rem(0.5);
+        width: 100%;
+        all: unset;
+        display: block;
+        background-color: black;
+        z-index: 100;
+    }
+}
 .nav--label:hover {
     // background-color: #839dbc; 
     text-decoration: underline;
-    line-height: 138%;
+    line-height: 150%;
     background-color: #89a2c0;
-    height: 100%;
+    height: rem(35);
+
+    @include breakpoint-down('smallmedium') {
+        height: rem(40);
+        line-height: 150%;
+    }
 }
 

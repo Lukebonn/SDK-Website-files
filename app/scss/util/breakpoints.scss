@@ -8,8 +8,9 @@ $breakpoints-up: (
 	'xlarge': '87.5em',
 );
 
-// 639px, 750px, 1149px, 1399px
+// 430px, 639px, 750px, 1149px, 1399px
 $breakpoints-down: (
+	'smallsmall': '26.875em',
 	'small': '39.9375em',
 	'smallmedium': '46.875em', 
 	'medium': '71.8125em',

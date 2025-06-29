@@ -2,6 +2,7 @@
 @use "../globals/fonts" as *;
 @use "../util/breakpoints" as *;
 
+
 .team-container {
     //number of people to make team cards for
     $card-count: 10;
@@ -19,7 +20,7 @@
     }
     @include breakpoint-down('small') {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, auto);
+        grid-template-rows: auto;
     }
 }
 .team-card-container {
@@ -59,7 +60,7 @@
 
     }
     @include breakpoint-down('small') {
-        font-size: 1.5vw;
+        font-size: rem(1);
     }
 }
 #Our-latest-project-banner-team {
