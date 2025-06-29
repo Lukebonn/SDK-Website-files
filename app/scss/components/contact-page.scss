@@ -2,17 +2,18 @@
 @use "../globals/fonts" as *;
 @use "../util/breakpoints" as *;
 
+* {
+    outline: rem(1) solid red;
+}
+
 #big-sec-separator {
     height: rem(3);
     width: 100%;
     all: unset;
     display: block;
     background-color: black;
+    z-index: 300;
 }
-
-// * {
-//   outline: 1px solid red;
-// }
 
 .html, .body {
     overflow-x: hidden;
@@ -22,7 +23,6 @@
     font-family: 'Digitalt';
     color: black;
     font-size: rem(80);
-    // padding-bottom: 70vh;
     text-align: center;
     background-image: linear-gradient(to right, rgb(212, 200, 185), rgb(107, 128, 135));
     &__container {
@@ -30,6 +30,10 @@
         display: flex;
         justify-content: center;
         padding-bottom: 40vh;
+        overflow: hidden;
+        // form {
+        //     overflow: hidden;
+        // }
         #next-intro-project {
             & {
                 position: absolute;
@@ -53,17 +57,13 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        // background-color: aliceblue;
-        width: 60vw;
-
+        width: 70vw;
         text-align: left;
         font-family: 'ByteBounce';
         font-size: rem(50);
         color: black;
-
         margin-left: rem(100);
         margin-right: rem(100);
-        // border: rem(1) solid bisque;
 
         input {
             border-radius: 0%;
@@ -83,13 +83,12 @@
             position: flex;
             display: flex;
             flex-direction: column;
-            width: 60vw;
+            width: 70vw;
             height: rem(60);
             margin-bottom: rem(20);
             input[type=text] {
                 height: rem(50);
                 padding-left: rem(10);
-                // box-shadow: inset 0 1px 3px #ddd;
                 &:focus {
                     outline: rem(2) solid black;
                     background-color: rgb(233, 233, 233);
@@ -100,8 +99,7 @@
             position: flex;
             display: flex;
             flex-direction: column;
-            width: 60vw;
-            // box-shadow: 10px 10px black inset;
+            width: 70vw;
             height: rem(60);
             margin-bottom: rem(20);
             input[type=text] {
@@ -117,7 +115,7 @@
             position: flex;
             display: flex;
             flex-direction: column;
-            width: 60vw;
+            width: 70vw;
             height: rem(60);
             margin-bottom: rem(20);
             box-shadow: 10 10 black inset;
@@ -135,8 +133,6 @@
             position: flex;
             display: flex;
             flex-direction: column;
-            // background-color: antiquewhite;
-            // border: rem(1) solid bisque;
             height: rem(50);
             margin-bottom: rem(30);
             box-shadow: 10 10 black inset;
@@ -153,9 +149,7 @@
             position: flex;
             display: flex;
             flex-direction: column;
-            // background-color: antiquewhite;
-            // border: rem(2) solid gray;
-            width: 60vw;
+            width: 70vw;
             height: rem(80);
             margin-bottom: rem(30);
             input[type=text] {
@@ -189,6 +183,16 @@
         }
     }
 }
-#captchaCheck {
-    display: none;
+textarea {
+  height: rem(150);
+  padding: rem(10);
+  font-family: 'ByteBounce';
+  font-size: rem(30);
+  border: none;
+  outline: rem(2) solid black;
+  resize: vertical;
+
+  &:focus {
+    background-color: rgb(233, 233, 233);
+  }
 }

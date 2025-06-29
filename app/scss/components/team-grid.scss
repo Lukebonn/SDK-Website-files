@@ -60,7 +60,7 @@
 
     }
     @include breakpoint-down('small') {
-        font-size: rem(1);
+        font-size: rem(10);
     }
 }
 #Our-latest-project-banner-team {
@@ -81,13 +81,17 @@
 }
 
 #team-sec-title {
+    width: 100%;
+    overflow: hidden;
     position: absolute;
     text-align: center;
     font-family: 'Digitalt';
     font-weight: 300;
-    font-size: rem(70);
+    // font-size: rem(70);
+    font-size: 9vw;
     left: 50%;
     transform: translateX(-50%);
     top: 0.5%;
     white-space: nowrap;
+    text-overflow: ellipsis;
 }

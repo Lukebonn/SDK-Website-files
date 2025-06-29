@@ -22,11 +22,10 @@ body::-webkit-scrollbar {
         position: relative;
         margin-bottom: 0;
         align-items: center;
-        // justify-content: center;
         margin: 0;
         padding: 0;
         height: $laptop-studio-logo-height;
-        overflow: visible;
+        overflow: hidden;
     }
 
     // @include breakpoint-down('small') {

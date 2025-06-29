@@ -1,9 +1,10 @@
 @use "../util/functions" as *;
 @use "../globals/fonts" as *;
+@use "../util/breakpoints" as *;
 
 .tagembed-widget {
     padding-bottom: rem(100);
-    padding-top: rem(100);
+    padding-top: rem(200);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -22,21 +23,29 @@
     transform: translateX(-50%);
     top: 0.5%;
     white-space: nowrap;
+    a {
+        width: 100%;
+        overflow: hidden;
+    }
     span {
         position: relative;
+        width: 100%;
         display: inline-block;
         color: black;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 9.2vw;
+        overflow: hidden;
     }
     span:hover {
         text-decoration: underline;
         color: #131947;
     }
     @include breakpoint-down('smallmedium') {
-        font-size: rem(50);
+        span {
+            font-size: 9.2vw;
+        }
         width: 100%;
-        // span {
-            
-        // }
     }
 }
 

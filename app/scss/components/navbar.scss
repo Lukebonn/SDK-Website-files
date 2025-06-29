@@ -2,22 +2,17 @@
 @use "../globals/fonts" as *;
 @use "../util/breakpoints" as *;
 
-// * {
-//     outline: 1px solid red;
-// }
-
 .nav-wrap {
     overflow: visible;
     height: rem(42);
     width: rem(435);
     z-index: 30;
-    // padding-bottom: rem(200);
     position: relative;
     overflow: hidden;
     display: flex;
     @include breakpoint-down('smallmedium') {
         display: table;
-        height: var(--top-nav-height);
+        height: $top-nav-height-big;
         width: 100%;
         position: relative;
         top: 0%;
@@ -25,7 +20,6 @@
         margin: 0%;
     }
 }
-
 .menu-dropbtn {
     position: absolute;
     z-index: 40;
@@ -55,15 +49,6 @@
         }
     }
 }
-// .menu-dropbtn.show {
-//     @include breakpoint-down('smallmedium') {
-//         img {
-//             background-color: black;
-//             width: rem(20);
-//         }
-//     }
-// }
-
 .nav-right {
     width: rem(350);
     height: rem(35);
@@ -72,9 +57,6 @@
     left: 50%;
     transform: translateX(24%);
     z-index: 30;
-    // .container__nav--label {
-    //     outline: 1px solid red;
-    // }
 
     @include breakpoint-down('smallmedium') {
         height: rem(41);
@@ -98,7 +80,6 @@
         }
     }
 }
-
 .nav-right.show {
     @include breakpoint-down('smallmedium') {
         height: rem(242);
@@ -120,14 +101,6 @@
 
     @include breakpoint-down('smallmedium') {
         display: none;
-        // display: block;
-        // width: 100%;
-        // position: absolute;
-        // height: rem(39);
-        // left: 0;
-        // top: rem(41);
-        // transform: none;
-        // z-index: 200;
     }
 }
 .nav-left:hover {
@@ -152,7 +125,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    // transform: translateX(rem(-17.5));
 
     @include breakpoint-down('smallmedium') {
         visibility: collapse;
@@ -237,7 +209,6 @@
     }
 }
 .nav--label:hover {
-    // background-color: #839dbc; 
     text-decoration: underline;
     line-height: 150%;
     background-color: #89a2c0;
