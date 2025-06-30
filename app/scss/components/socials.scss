@@ -4,7 +4,7 @@
 
 .tagembed-widget {
     padding-bottom: rem(100);
-    padding-top: rem(200);
+    padding-top: rem(115);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -48,15 +48,11 @@
         width: 100%;
     }
 }
-
-#Our-latest-project-banner-socials {
-    position: absolute;
-    bottom: 0.1%; 
-    left: 1%;
-    color: rgba(0, 0, 0, 0.77);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Black Han Sans;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 600; 
+#insta-slideshow-header-subtext {
+    color: #1e1e0f;
+    font-family: 'Digitalt';
+    display: inline-block;
+    font-size: rem(20);
+    margin-bottom: rem(50);
+    text-align: center;
 }
