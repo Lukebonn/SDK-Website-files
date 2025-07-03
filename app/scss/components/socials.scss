@@ -53,6 +53,12 @@
     font-family: 'Digitalt';
     display: inline-block;
     font-size: rem(20);
-    margin-bottom: rem(50);
+    padding-top: rem(40);
+    padding-bottom: rem(50);
+    margin-bottom: rem(0);
     text-align: center;
+    @include breakpoint-down('smallmedium') {
+        margin-bottom: rem(50);
+        padding-top: rem(0);
+    }
 }

@@ -28,15 +28,8 @@ body::-webkit-scrollbar {
         overflow: hidden;
     }
 
-    // @include breakpoint-down('small') {
-    //     height: rem(200);
-    // }
-
     @include breakpoint-down('smallmedium') {
-        // height: $top-nav-height;
         height: $top-nav-height-small + $studio-logo-height;
-        // margin-top: $top-nav-height;
-        // padding-bottom: $studio-logo-height;
     }
 }
 .studio-logo.show {
@@ -96,9 +89,6 @@ body::-webkit-scrollbar {
         width: 100%;
         padding-top: 0;
     }
-    // @include breakpoint-down('smallmedium') {
-    //     margin-top: $top-nav-height;
-    // }
 }
 
 .studio-logo-background {

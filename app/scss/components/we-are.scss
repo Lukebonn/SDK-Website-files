@@ -28,17 +28,15 @@ body, html {
   }
 }
 
-//switch breakpoint to 750 and switch to viewport sized font-size
-
 .side-table--statement {
   & {
     display: inline-block;
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, rem(20));
     color: rgba(0, 0, 0, 0.77);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Black Han Sans;
+    font-family: 'Cotham Sans';
     font-size: rem(64);
     font-style: normal;
     font-weight: 600; 
@@ -47,18 +45,18 @@ body, html {
     font-size: 8vw;
   }
 }
+.side-table--highlight {
+  font-family: 'Cotham Sans';
+}
 
 .side-table--statement-intro-container {
   & {
     position: relative;
     display: inline-block;
-    // border-radius: 1rem;
-    // overflow: hidden;
     width: 60%;
     left: 50%;
     transform: translateX(-50%) translateY(rem(150));
     text-align: center;
-    // border: 1px solid red;
   }
   @include breakpoint-down('smallmedium') {
     font-size: 8vw;
@@ -93,25 +91,12 @@ body, html {
     margin: 0 auto;
     border-radius: rem(30);
     backdrop-filter: blur(10px);
-    // -webkit-mask-image: radial-gradient(
-    //   circle at center,
-    //   rgba(0,0,0,1) 60%,    
-    //   rgba(0,0,0,0) 100%    
-    // );
-    // mask-image: radial-gradient(
-    //   circle at center,
-    //   rgba(0,0,0,1) 60%,
-    //   rgba(0,0,0,0) 100%
-    // );
   }
-  // transform: translateY(-rem(70));
-  // text-align: center;
   @include breakpoint-down('smallmedium') {
     
   }
 }
 
-//gradient background
 .fullscreen-gradient {
   position: relative;
   justify-content: space-between;
@@ -128,7 +113,6 @@ body, html {
   margin-left: 5%;
 }
 
-//scrolling animation
 .scrolling-words-container {
   display: inline-block;
   vertical-align: middle;
