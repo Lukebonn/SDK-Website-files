@@ -3,14 +3,14 @@
 @use "../util/breakpoints" as *;
 
 .latest-project-container {
-    background-image: url("/design/Library_hero.png");
+    background-image: url("../SDK-Website-files/design/Library_hero.png");
     aspect-ratio: 96/31;
     background-size: cover;
     position: relative;
     display: flex;
 
     @include breakpoint-down('smallmedium') {
-        background-image: url('/design/Library_hero_extended.jpeg');
+        background-image: url('../design/Library_hero_extended.jpeg');
         aspect-ratio: unset;
         width: 100%;
         height: rem(220);
